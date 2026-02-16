@@ -2,8 +2,8 @@ namespace SimpleAreaCalculator;
 
 public class Rectangle : IShape
 {
-    public double Width { get; set; }
-    public double Height { get; set; }
+    public double Width { get; init; }
+    public double Height { get; init; }
     public double Area => Width * Height;
 
     public Rectangle(double width, double height)
@@ -14,6 +14,6 @@ public class Rectangle : IShape
 
     public void DisplayShapeInfo()
     {
-        Console.WriteLine($"Rectangle - (Width = {Width}, Height = {Height}), Area = {Area}");
+        Console.WriteLine($"Rectangle - (Width = {Width}, Height = {Height}), Area = {Area:F2}");
     }
 }

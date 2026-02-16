@@ -2,8 +2,8 @@ namespace SimpleAreaCalculator;
 
 public class Circle : IShape
 {
-    public double Radius { get; set; }
-    public double Area => Math.PI * Math.Pow(Radius, 2);
+    public double Radius { get; init; }
+    public double Area => Math.PI * (Radius * Radius);
 
     public Circle(double radius)
     {
@@ -12,6 +12,6 @@ public class Circle : IShape
 
     public void DisplayShapeInfo()
     {
-        Console.WriteLine($"Circle - (Radius = {Radius}), Area = {Area}");
+        Console.WriteLine($"Circle - (Radius = {Radius}), Area = {Area:F2}");
     }
 }

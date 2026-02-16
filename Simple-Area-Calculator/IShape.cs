@@ -2,7 +2,7 @@ namespace SimpleAreaCalculator;
 
 public interface IShape
 {
-    public double Area { get; }
+    double Area { get; }
 
-    public void DisplayShapeInfo();
+    void DisplayShapeInfo();
 }

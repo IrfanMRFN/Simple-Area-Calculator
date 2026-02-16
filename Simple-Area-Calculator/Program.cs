@@ -18,7 +18,12 @@ public class Program
     {
         foreach (IShape shape in shapes)
         {
-            shape.DisplayShapeInfo();            
+            shape.DisplayShapeInfo();     
+
+            if (shape.Area > 50)
+            {
+                Console.WriteLine("  -> [Warning] Large Shape Detected!");
+            }       
         }
     }
 }
